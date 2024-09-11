@@ -1,22 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-import { CursosService } from '../cursos/cursos.service';
-
+import { CursoServiceService } from '../cursos/curso-service.service';
 @Component({
   selector: 'app-receber-curso-criado',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './receber-curso-criado.component.html',
-  styleUrls: ['./receber-curso-criado.component.css']
+  styleUrl: './receber-curso-criado.component.css'
 })
-export class ReceberCursoCriadoComponent implements OnInit {
+export class ReceberCursoCriadoComponent {
+  curso: string = '';
 
-  curso: string;
+  constructor(private CursoService: CursoServiceService){
 
-  constructor(private cursosService: CursosService) { }
-
-  ngOnInit() {
-    this.cursosService.emitirCursoCriado.subscribe(
-      cursoCriado => this.curso = cursoCriado
-    );
   }
 
+  ngOnInit(){
+    this.CursoService.emitirCurso.subscribe(curso => {
+      this.curso = curso
+    });
+  }
 }

@@ -1,12 +1,15 @@
-<h5>Compartilhando um serviço entre componentes</h5>
-
-<input type="text" #cursoInput>
-<button (click)="onAddCurso(cursoInput.value)">Add Curso</button>
-
-<ul>
-  <li *ngFor="let curso of cursos">
-    {{ curso }}
-  </li>
-</ul>
+<div class="criar-cursos">
+    Lista de Cursos compartilhados entra coponentes por serviços
+    <br>
+    <label for="">
+        Adicionar curso: <input placeholder="Digite o nome do curso.." #in_curso>
+        <button (click)="onAddCurso(in_curso.value)">Adicionar</button>
+    </label>
+    <ul>
+        <li *ngFor="let curso of cursos">
+           {{ curso }} 
+        </li>
+    </ul>
+</div>
 
 <app-receber-curso-criado></app-receber-curso-criado>
