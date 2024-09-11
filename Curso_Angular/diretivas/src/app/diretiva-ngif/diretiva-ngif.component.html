@@ -1,0 +1,48 @@
+<h5>*NgIf</h5>
+
+<div class="insert-cursos">
+    <label for="">
+        Deseja inserir algum curso? 
+        <input id="checkBoxCurso" type="checkbox" [(ngModel)]="cursoAdicionarVisivel">
+    </label>
+    <div *ngIf="cursoAdicionarVisivel">
+        <input type="text" placeholder="Digite o nome do curso" [(ngModel)]="novoCurso">
+        <div *ngIf="!cursos.includes(novoCurso) && novoCurso">
+            <button (click)="inserirCurso()">Adicionar</button>
+        </div>
+        <div *ngIf="cursos.includes(novoCurso) && novoCurso">
+            <p>Curso <b>{{ novoCurso }}</b> já está na lista</p>
+        </div>
+    </div>
+</div>
+
+<div class="remove-curso">
+    <label for="">
+        Deseja remover algum curso? 
+        <input id="checkBoxCurso" type="checkbox" [(ngModel)]="cursoRemoveValor">
+    </label>
+    <div *ngIf="cursoRemoveValor">
+        <input type="text" placeholder="Digite o nome do curso" [(ngModel)]="tirarCurso">
+        <div *ngIf="cursos.includes(tirarCurso) && tirarCurso">
+            <button (click)="removerCurso()" [disabled]="!cursos.includes(tirarCurso)">Remover</button>
+        </div>
+        <div *ngIf="!cursos.includes(tirarCurso) && tirarCurso">
+            <p>Curso <b>{{ tirarCurso }}</b> não encontrado</p>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="cursos.length > 0">
+  <p>Lista de Cursos aqui</p>
+  <div class="cursos">
+    <ul>
+      <li *ngFor="let curso of cursos">
+        {{ curso }}
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div *ngIf="cursos.length == 0">
+  <p>Não há cursos a serem exibidos</p>
+</div>
