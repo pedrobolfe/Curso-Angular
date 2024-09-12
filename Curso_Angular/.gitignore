@@ -1,18 +1,42 @@
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/node_modules
 npm-debug.log
+yarn-error.log
 
-03-data-binding/app/**/*.js
-02-primeiro-componente/app/**/*.js
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 
-*.iml
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
 
-.idea/*
-02-primeiro-componente/app/cursos/cursos.component.js
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
 
-02-primeiro-componente/app/cursos/cursos.component.js
-.vscode/angulardoc.json
-forms/.vscode/settings.json
-requests-http/.vscode/settings.json
-requests-http/.firebase/
-angularv61/package-lock.json
-novidades-v9/.angulardoc.json
-package-lock.json
+# System files
+.DS_Store
+Thumbs.db
