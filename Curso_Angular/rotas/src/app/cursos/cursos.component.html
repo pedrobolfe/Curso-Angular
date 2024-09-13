@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<div class="container">
+    <p>Página: {{ paginas }}</p>
+    <div class="card-curso">
+        <div *ngFor="let curso of cursos" [routerLink]="['/cursos', curso.id]" class="curso-card" routerLink>
+          <div class="curso">
+            <h3>{{ curso.nome }}</h3>
+            <p>Carga horária: {{ curso.cargaHoraria }}</p>
+            <p>Quantidade de aulas: {{ curso.numAulas }}</p>
+            <p>Categoria: {{ curso.categoria }}</p>
+          </div>
+        </div>
+    </div>
+    <div class="button-container">
+        <button class="btn" (click)="voltarPagina()"><i class="fas fa-chevron-left"></i></button>
+        <button class="btn" (click)="proxPagina()"><i class="fas fa-chevron-right"></i></button>
+    </div>
+</div>

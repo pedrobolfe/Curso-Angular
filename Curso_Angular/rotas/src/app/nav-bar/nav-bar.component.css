@@ -1,0 +1,13 @@
+.activebutton {
+    background-color: #007bff; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove sublinhado do link */
+    font-weight: bold; /* Deixa o texto em negrito */
+    transition: background-color 0.3s ease; /* Transição suave para hover */
+}
+
+.activebutton:hover {
+    background-color: #0056b3; /* Cor de fundo mais escura ao passar o mouse */ 
+}

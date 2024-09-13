@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-
 import { CursoServiceService } from '../cursos/curso-service.service';
 import { ReceberCursoCriadoComponent } from '../receber-curso-criado/receber-curso-criado.component'
 

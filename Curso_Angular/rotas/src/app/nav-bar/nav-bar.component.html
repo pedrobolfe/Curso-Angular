@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand">Rotas Ng2</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a routerLink="" routerLinkActive="activebutton" [routerLinkActiveOptions]="{ exact: true }" class="nav-link" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/login" routerLinkActive="activebutton" class="nav-link">Login</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/cursos" [queryParams]="{ paginas: 1 }" routerLinkActive="activebutton" class="nav-link">Cursos</a>
+          </li>
+          <li class="nav-item">
+            <!-- Certifique-se de que 'idCurso' é uma variável disponível no seu componente -->
+            <a [routerLink]="['/cursos', idCurso]" routerLinkActive="activebutton" class="nav-link">Pesquise curso</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>

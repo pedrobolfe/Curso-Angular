@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="card-livro">
+      <div *ngFor="let livro of livros | keyvalue">
+        <div class="livro">
+          <h3>{{ livro.value.titulo | camelCase}}</h3>
+          <p>Ano de Lançamento: {{ livro.value.anoLancamento }}</p>
+          <p>Autor: {{ livro.value.autor }}</p>
+          <p>Valor: R${{ livro.value.valor | number:'2.2' }}</p> <!-- 5,6 => 05,60-->
+          <p>Número de Páginas: {{ livro.value.numeroPg | number:'.0-0'}}</p> <!-- arredonda para cima ou baixo ex: 54.7 => 55, 54.3 => 54 -->
+          <p><a [href]="livro.value.link">Link para mais detalhes</a></p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="inFiltrarLivros">
+        <input type="text" [(ngModel)]="filtro" placeholder="Filtrar livros...">
+        <ul>
+            <li *ngFor="let livro of livrosFiltrados()">{{ livro }}</li>
+        </ul>
+    </div>
+</div>
+  

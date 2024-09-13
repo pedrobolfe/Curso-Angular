@@ -1,0 +1,85 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-curso {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.curso {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px;
+    height: 250px; /* Define uma altura fixa para todos os cartões */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Alinha o conteúdo verticalmente */
+    justify-content: space-between; /* Distribui o espaço entre o título e o conteúdo */
+}
+
+.curso:hover {
+    transform: scale(1.05);  
+}
+
+.curso h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+    overflow: hidden; /* Adiciona ocultamento de texto longo */
+    text-overflow: ellipsis; /* Adiciona reticências se o texto for muito longo */
+    white-space: nowrap; /* Impede a quebra de linha do texto */
+}
+
+.curso p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+    overflow: hidden; /* Adiciona ocultamento de texto longo */
+    text-overflow: ellipsis; /* Adiciona reticências se o texto for muito longo */
+    white-space: nowrap; /* Impede a quebra de linha do texto */
+}
+
+/* Container dos botões */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espaço entre os botões */
+    margin-top: 20px;
+}
+
+/* Estilo dos botões */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px; /* Tamanho inicial dos ícones */
+    color: #808080; /* Cinza para os ícones */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.2); /* Aumenta o tamanho ao passar o mouse */
+    color: #4d4d4d; /* Torna o ícone um pouco mais escuro ao passar o mouse */
+}
+
+.btn:focus {
+    outline: none; /* Remove o contorno de foco padrão */
+}
