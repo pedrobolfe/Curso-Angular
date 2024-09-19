@@ -1,0 +1,51 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="nome" class="form-label">Nome</label>
+      <input type="text" class="form-control" formControlName="nome">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" formControlName="email">
+    </div>
+    
+    <div class="endereco">
+      <div class="mb-3">
+        <label for="cep" class="form-label">CEP</label>
+        <input type="text" class="form-control" formControlName="cep">
+      </div>
+      
+      <div class="mb-3">
+        <label for="numero" class="form-label">Número</label>
+        <input type="text" class="form-control" formControlName="numero">
+      </div>
+      
+      <div class="mb-3">
+        <label for="rua" class="form-label">Rua</label>
+        <input type="text" class="form-control" formControlName="rua">
+      </div>
+      
+      <div class="mb-3">
+        <label for="complemento" class="form-label">Complemento</label>
+        <input type="text" class="form-control" formControlName="complemento">
+      </div>
+      
+      <div class="mb-3">
+        <label for="bairro" class="form-label">Bairro</label>
+        <input type="text" class="form-control" formControlName="bairro">
+      </div>
+      
+      <div class="mb-3">
+        <label for="cidade" class="form-label">Cidade</label>
+        <input type="text" class="form-control" formControlName="cidade">
+      </div>
+      
+      <div class="mb-3">
+        <label for="estado" class="form-label">Estado</label>
+        <input type="text" class="form-control" formControlName="estado">
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn" (click)="resetarForm()">Cancelar</button>
+    
+</form>

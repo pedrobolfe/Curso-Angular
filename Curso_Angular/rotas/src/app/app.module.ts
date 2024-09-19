@@ -12,7 +12,7 @@ import { LoginComponent } from './login/login.component';
 //import { routing } from './app.routing';
 import { AppRoutingModule } from './app.routing.module';
 import { CursosModule } from './cursos/cursos.module';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { NavbarModule } from './nav-bar/nav-bar.module';
 //import { AlunosModule } from './alunos/alunos.module';
 // import { AuthService } from './login/auth.service';
 
@@ -29,7 +29,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     //AlunosModule,
     AppRoutingModule,
     RouterModule,
-    NavBarComponent
+    
+    NavbarModule
   ],
   providers: [
     // AuthService, 

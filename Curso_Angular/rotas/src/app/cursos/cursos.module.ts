@@ -13,7 +13,6 @@ import { CursosRoutingModule } from './cursos.routing.module';
         CommonModule,
         RouterModule,
         CursosRoutingModule
-    
     ],
     exports: [],
     declarations: [
