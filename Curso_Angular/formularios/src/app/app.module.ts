@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { DataFormsModule } from './data-forms/data-forms.module';
+// import { DataFormsModule } from './data-forms/data-forms.module';
+import { DataFormsComponent } from './data-forms/data-forms.component';
 
 @NgModule({
   declarations: [],
@@ -11,7 +12,8 @@ import { DataFormsModule } from './data-forms/data-forms.module';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    DataFormsModule
+    //DataFormsModule
+    DataFormsComponent
   ],
   providers: [],
   bootstrap: []
