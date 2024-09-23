@@ -32,7 +32,6 @@ export class DataFormsComponent {
     //   nome: new FormControl(null),
     //   email: new FormControl(null)
     // });
-
     this.formulario = this.formBuilder.group({
       nome: [null, [Validators.required, Validators.maxLength(25)]], 
       email: [null, [Validators.required, Validators.email]],
@@ -93,7 +92,7 @@ export class DataFormsComponent {
   populaDadosForm(dados: any) {
     // this.formulario.setValue({});
     console.log(dados);
-    
+
     this.formulario.patchValue({
       endereco: {
         rua: dados.logradouro,
